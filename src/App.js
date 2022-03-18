@@ -1,9 +1,9 @@
-import MainHeader from "./MainHeader"
-import Container from "./Container"
-import Form from "./Form"
-import Section from "./Section"
-import Buttons from "./Buttons"
-import Tasks from "./Tasks"
+import MainHeader from "./components/MainHeader"
+import Container from "./components/Container"
+import Form from "./components/Form"
+import Section from "./components/Section"
+import Buttons from "./components/Buttons"
+import Tasks from "./components/Tasks"
 
 function App() {
   const DUMMY_TASKS = [
