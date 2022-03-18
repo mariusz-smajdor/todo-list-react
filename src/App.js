@@ -1,9 +1,11 @@
 import MainHeader from "./MainHeader";
-
+import Container from "./Container/index.js"
 
 function App() {
   return (
-    <MainHeader title="Lista zadań" />
+    <Container>
+      <MainHeader title="Lista zadań" />
+    </Container>
   );
 }
 
