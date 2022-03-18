@@ -1,8 +1,9 @@
+import MainHeader from "./MainHeader";
+
+
 function App() {
   return (
-    <div>
-      Hello world!
-    </div>
+    <MainHeader title="Lista zadań" />
   );
 }
 
