@@ -16,6 +16,17 @@ function App() {
   const [tasks, setTasks] = useState(DUMMY_TASKS)
   const hideDone = false
 
+  const toggleDoneHandler = id => {
+    setTasks(tasks => tasks.map(task => {
+      if (task.id === id) {
+        return {
+          ...task, done: !task.done
+        }
+      }
+      return task
+    }))
+  }
+
   const removeTaskHandler = id => {
     console.log(id)
     setTasks(tasks => tasks.filter(task => task.id !== id))
@@ -34,7 +45,21 @@ function App() {
     <Container>
       <MainHeader title="Lista zadań" />
       <Section title="Dodaj nowe zadanie" body={<Form onAddTask={addNewTaskHandler} />} />
-      <Section title="Lista zadań" body={<Tasks tasks={tasks} hideDone={hideDone} onRemoveTask={removeTaskHandler} />} extraHeaderContent={<Buttons tasks={DUMMY_TASKS} />} />
+      <Section
+        title="Lista zadań"
+        body={
+          <Tasks
+            tasks={tasks}
+            hideDone={hideDone}
+            onRemoveTask={removeTaskHandler}
+            onToggleDone={toggleDoneHandler}
+          />}
+        extraHeaderContent={
+          <Buttons
+            tasks={tasks}
+          />
+        }
+      />
     </Container>
   );
 }
