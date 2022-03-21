@@ -6,7 +6,7 @@ const Buttons = props => {
     <div className="buttons">
       {props.tasks.length > 0 && (
         <Fragment>
-          <button className="buttons__button">
+          <button className="buttons__button" onClick={props.onToggleHideDone}>
             {props.hideDone ? "Pokaż" : "Ukryj"} ukończone
           </button>
           <button className="buttons__button" disabled={props.tasks.every(task => task.done)} >

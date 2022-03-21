@@ -14,7 +14,11 @@ const DUMMY_TASKS = [
 
 function App() {
   const [tasks, setTasks] = useState(DUMMY_TASKS)
-  const hideDone = false
+  const [hideDone, setHideDone] = useState(false)
+
+  const toggleHideDoneHandler = () => {
+    setHideDone(hideDone => !hideDone)
+  }
 
   const toggleDoneHandler = id => {
     setTasks(tasks => tasks.map(task => {
@@ -57,6 +61,8 @@ function App() {
         extraHeaderContent={
           <Buttons
             tasks={tasks}
+            hideDone={hideDone}
+            onToggleHideDone={toggleHideDoneHandler}
           />
         }
       />
