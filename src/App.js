@@ -16,6 +16,10 @@ function App() {
   const [tasks, setTasks] = useState(DUMMY_TASKS)
   const [hideDone, setHideDone] = useState(false)
 
+  const markAllDoneHandler = () => {
+    setTasks(tasks => tasks.map(task => ({ ...task, done: true })))
+  }
+
   const toggleHideDoneHandler = () => {
     setHideDone(hideDone => !hideDone)
   }
@@ -63,6 +67,7 @@ function App() {
             tasks={tasks}
             hideDone={hideDone}
             onToggleHideDone={toggleHideDoneHandler}
+            onMarkAllDone={markAllDoneHandler}
           />
         }
       />
