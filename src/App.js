@@ -36,7 +36,6 @@ function App() {
   }
 
   const removeTaskHandler = id => {
-    console.log(id)
     setTasks(tasks => tasks.filter(task => task.id !== id))
   }
 
