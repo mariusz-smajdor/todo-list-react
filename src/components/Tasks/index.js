@@ -12,7 +12,7 @@ const Tasks = props => {
             <span className={task.done ? "tasks__text--done" : ""}>
               {task.content}
             </span>
-            <button className="tasks__button tasks__button--remove">
+            <button className="tasks__button tasks__button--remove" onClick={() => { props.onRemoveTask(task.id) }}>
               🗑️
             </button>
           </li>
