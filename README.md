@@ -8,10 +8,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 https://mariusz-smajdor.github.io/todo-list-react/
 
-## Conventions
+## Conventions and technologies
 
 - BEM
 - Immutability
+- LocalStorage
+- useState
+- useEffect
 
 ## Available Scripts
 
