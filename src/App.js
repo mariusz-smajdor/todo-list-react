@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import MainHeader from "./components/MainHeader"
 import Container from "./components/Container"
@@ -7,14 +7,20 @@ import Section from "./components/Section"
 import Buttons from "./components/Buttons"
 import Tasks from "./components/Tasks"
 
-const DUMMY_TASKS = [
-  { content: "Lorem ipsum", done: false, id: "1" },
-  { content: "dolor sit amet", done: true, id: "2" }
-]
+const getInitialTasks = () => {
+  const tasksFromLocalStorage = localStorage.getItem("tasks")
+  return tasksFromLocalStorage
+    ? JSON.parse(tasksFromLocalStorage)
+    : []
+}
 
 function App() {
-  const [tasks, setTasks] = useState(DUMMY_TASKS)
+  const [tasks, setTasks] = useState(getInitialTasks)
   const [hideDone, setHideDone] = useState(false)
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks))
+  }, [tasks])
 
   const markAllDoneHandler = () => {
     setTasks(tasks => tasks.map(task => ({ ...task, done: true })))
