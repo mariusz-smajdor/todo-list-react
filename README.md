@@ -15,6 +15,8 @@ https://mariusz-smajdor.github.io/todo-list-react/
 - LocalStorage
 - useState
 - useEffect
+- useRef
+- custom hooks
 
 ## Available Scripts
 
