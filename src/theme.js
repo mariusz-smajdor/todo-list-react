@@ -3,7 +3,7 @@ export const theme = {
     mainText: "#333",
     mainBackground: "#eee",
     mainDetail: "maroon",
-    disabled: "#ccc",
+    secondaryDetail: "#ccc",
   },
   space: {
     normal: 10,

@@ -28,6 +28,6 @@ export const Button = styled.button`
   }
 
   &:disabled {
-    color: ${props => props.theme.color.disabled};
+    color: ${props => props.theme.color.secondaryDetail};
   }
 `
