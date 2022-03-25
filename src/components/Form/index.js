@@ -1,6 +1,5 @@
 import { useState, useRef } from "react"
-
-import "./style.css"
+import { Wrapper, Input, Button } from "./styled"
 
 const Form = props => {
   const [newTaskContent, setNewTaskContent] = useState("")
@@ -21,19 +20,18 @@ const Form = props => {
   }
 
   return (
-    <form className="form" onSubmit={formSubmitHandler}>
-      <input
-        className="form__field"
+    <Wrapper onSubmit={formSubmitHandler}>
+      <Input
         type="text"
         placeholder="Co jest do zrobienia?"
         value={newTaskContent}
         onChange={event => setNewTaskContent(event.target.value)}
         ref={inputRef}
       />
-      <button className="form__button" type="submit">
+      <Button type="submit">
         Dodaj zadanie
-      </button>
-    </form>
+      </Button>
+    </Wrapper>
   )
 }
 
