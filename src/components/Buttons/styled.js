@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 export const Wrapper = styled.div`
   display: flex;
-  gap: 10px;
-  padding: 20px;
+  gap: ${props => props.theme.space.normal}px;
+  padding: ${props => props.theme.space.big}px;
 
   @media (max-width: ${props => props.theme.breakpoint.mobileMax}px) {
     padding-top: 0;
