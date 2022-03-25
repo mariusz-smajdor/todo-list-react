@@ -1,24 +1,23 @@
 import { Fragment } from "react"
-import "./style.css"
+import { Wrapper, Button } from "./styled"
 
 const Buttons = props => {
   return (
-    <div className="buttons">
+    <Wrapper>
       {props.tasks.length > 0 && (
         <Fragment>
-          <button className="buttons__button" onClick={props.onToggleHideDone}>
+          <Button onClick={props.onToggleHideDone}>
             {props.hideDone ? "Pokaż" : "Ukryj"} ukończone
-          </button>
-          <button
-            className="buttons__button"
+          </Button>
+          <Button
             disabled={props.tasks.every(task => task.done)}
             onClick={props.onMarkAllDone}
           >
             Ukończ wszystkie
-          </button>
+          </Button>
         </Fragment>
       )}
-    </div>
+    </Wrapper>
   )
 }
 
