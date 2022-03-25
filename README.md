@@ -10,13 +10,13 @@ https://mariusz-smajdor.github.io/todo-list-react/
 
 ## Conventions and technologies
 
-- BEM
 - Immutability
 - LocalStorage
 - useState
 - useEffect
 - useRef
 - custom hooks
+- styled components
 
 ## Available Scripts
 
