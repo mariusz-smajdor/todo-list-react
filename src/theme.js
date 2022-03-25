@@ -5,6 +5,10 @@ export const theme = {
     mainDetail: "maroon",
     disabled: "#ccc",
   },
+  space: {
+    normal: 10,
+    big: 20
+  },
   breakpoint: {
     mobileMax: 767
   }
