@@ -1,6 +1,6 @@
 import { List, Item, Button, TaskText } from "./styled"
 
-const Tasks = props => {
+const TaskList = props => {
   return (
     <List>
       {props.tasks.map(task => {
@@ -31,4 +31,4 @@ const Tasks = props => {
   )
 }
 
-export default Tasks
+export default TaskList
