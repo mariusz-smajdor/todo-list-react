@@ -1,14 +1,14 @@
 import { Wrapper, Header, Title, Body } from "./styled"
 
-const Section = props => {
+const Section = ({ title, extraHeaderContent, body }) => {
   return (
     <Wrapper>
       <Header>
-        <Title>{props.title}</Title>
-        {props.extraHeaderContent}
+        <Title>{title}</Title>
+        {extraHeaderContent}
       </Header>
       <Body>
-        {props.body}
+        {body}
       </Body>
     </Wrapper>
   )

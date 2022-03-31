@@ -1,17 +1,23 @@
 import { Fragment } from "react"
+import { useDispatch, useSelector } from "react-redux"
+
+import { markAllDone, selectTasks, toggleHideDone } from "../tasksSlice"
 import { Wrapper, Button } from "./styled"
 
-const Buttons = props => {
+const Buttons = () => {
+  const { tasks, hideDone } = useSelector(selectTasks)
+  const dispatch = useDispatch()
+
   return (
     <Wrapper>
-      {props.tasks.length > 0 && (
+      {tasks.length > 0 && (
         <Fragment>
-          <Button onClick={props.onToggleHideDone}>
-            {props.hideDone ? "Pokaż" : "Ukryj"} ukończone
+          <Button onClick={() => dispatch(toggleHideDone())}>
+            {hideDone ? "Pokaż" : "Ukryj"} ukończone
           </Button>
           <Button
-            disabled={props.tasks.every(task => task.done)}
-            onClick={props.onMarkAllDone}
+            disabled={tasks.every(task => task.done)}
+            onClick={() => dispatch(markAllDone())}
           >
             Ukończ wszystkie
           </Button>

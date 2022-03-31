@@ -1,3 +1,3 @@
-const MainHeader = (props) => <h1>{props.title}</h1>
+const MainHeader = ({ title }) => <h1>{title}</h1>
 
 export default MainHeader
