@@ -17,6 +17,7 @@ https://mariusz-smajdor.github.io/todo-list-react/
 - useRef
 - custom hooks
 - styled components
+- redux
 
 ## Available Scripts
 
