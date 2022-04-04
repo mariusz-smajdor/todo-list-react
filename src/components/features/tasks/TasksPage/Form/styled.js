@@ -9,13 +9,6 @@ export const Wrapper = styled.form`
   }
 `
 
-export const Input = styled.input`
-  flex-grow: 1;
-  border: 1px solid #ddd;
-  border-radius: ${props => props.theme.space.normal}px;
-  padding: ${props => props.theme.space.normal}px;
-`
-
 export const Button = styled.button`
   border: unset;
   border-radius: ${props => props.theme.space.normal}px;
