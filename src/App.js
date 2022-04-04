@@ -3,18 +3,19 @@ import AboutPage from "./components/features/about/AboutPage"
 import TaskPage from "./components/features/tasks/TaskPage"
 import TasksPage from "./components/features/tasks/TasksPage"
 import Navigation from "./components/Navigation"
+import { toAbout, toTask, toTasks } from "./routes"
 
 const App = () => (
   <HashRouter>
     <Navigation />
     <Switch>
-      <Route path="/zadania/:id">
+      <Route path={toTask()}>
         <TaskPage />
       </Route>
-      <Route path="/zadania">
+      <Route path={toTasks()}>
         <TasksPage />
       </Route>
-      <Route path="/o-projekcie">
+      <Route path={toAbout()}>
         <AboutPage />
       </Route>
       <Route path="/">
