@@ -1,11 +1,11 @@
-import MainHeader from "../../common/MainHeader"
-import Container from "../../common/Container"
+import MainHeader from "../../../common/MainHeader"
+import Container from "../../../common/Container"
+import Section from "../../../common/Section"
 import Form from "./Form"
-import Section from "../../common/Section"
 import Buttons from "./Buttons"
 import TaskList from "./TaskList"
 
-const Tasks = () => {
+const TasksPage = () => {
   return (
     <Container>
       <MainHeader title="Lista zadań" />
@@ -22,4 +22,4 @@ const Tasks = () => {
   );
 }
 
-export default Tasks;
+export default TasksPage;

@@ -1,7 +1,7 @@
 import { Fragment } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
-import { fetchExampleTasks, markAllDone, selectTasks, toggleHideDone } from "../tasksSlice"
+import { fetchExampleTasks, markAllDone, selectTasks, toggleHideDone } from "../../tasksSlice"
 import { Wrapper, Button } from "./styled"
 
 const Buttons = () => {
