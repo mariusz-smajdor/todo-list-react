@@ -15,10 +15,19 @@ export const List = styled.ul`
 export const StyledNavLink = styled(NavLink)`
   text-decoration: unset;
   font-weight: bold;
-  color: ${props => props.theme.color.mainDetail};
   font-size: 1.2rem;
+  color: ${props => props.theme.color.mainDetail};
+  transition: filter 1s;
 
   &.active {
+    filter: brightness(120%)
+  }
+
+  &:hover {
     filter: brightness(110%)
+  }
+
+  &:active {
+    filter: brightness(120%)
   }
 `
