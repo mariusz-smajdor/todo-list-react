@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import { Link } from "react-router-dom"
 
 export const List = styled.ul`
   margin: 0;
@@ -51,4 +52,9 @@ export const TaskText = styled.span`
   ${props => props.styledDone && css`
     text-decoration: line-through;
   `}
+`
+
+export const StyledLink = styled(Link)`
+  color: unset;
+  text-decoration: none;
 `
