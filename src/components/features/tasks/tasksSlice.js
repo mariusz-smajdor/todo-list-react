@@ -25,10 +25,14 @@ const tasksSlice = createSlice({
     },
     toggleHideDone: state => {
       state.hideDone = !state.hideDone
+    },
+    fetchExampleTasks: () => { },
+    setExampleTasks: (state, { payload: tasks }) => {
+      state.tasks = tasks
     }
   }
 })
 
-export const { addTask, toggleHideDone, toggleDone, removeTask, markAllDone } = tasksSlice.actions
+export const { addTask, toggleHideDone, toggleDone, removeTask, markAllDone, fetchExampleTasks, setExampleTasks } = tasksSlice.actions
 export const selectTasks = state => state.tasks
 export default tasksSlice.reducer

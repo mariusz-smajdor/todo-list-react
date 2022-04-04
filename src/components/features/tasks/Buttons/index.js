@@ -1,7 +1,7 @@
 import { Fragment } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
-import { markAllDone, selectTasks, toggleHideDone } from "../tasksSlice"
+import { fetchExampleTasks, markAllDone, selectTasks, toggleHideDone } from "../tasksSlice"
 import { Wrapper, Button } from "./styled"
 
 const Buttons = () => {
@@ -10,6 +10,13 @@ const Buttons = () => {
 
   return (
     <Wrapper>
+      {tasks.length === 0 && (
+        <Fragment>
+          <Button onClick={() => dispatch(fetchExampleTasks())}>
+            Pobierz przykładowe zadania
+          </Button>
+        </Fragment>
+      )}
       {tasks.length > 0 && (
         <Fragment>
           <Button onClick={() => dispatch(toggleHideDone())}>
