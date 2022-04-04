@@ -18,6 +18,7 @@ https://mariusz-smajdor.github.io/todo-list-react/
 - custom hooks
 - styled components
 - redux
+- redux-saga
 
 ## Available Scripts
 
