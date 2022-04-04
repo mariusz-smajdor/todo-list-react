@@ -12,7 +12,7 @@ const AboutPage = () => {
       />
       <Section
         title="Technologie i konwencje"
-        body="CSS-Flexbox, CSS-Grid, Immutability, LocalStorage, useState, useEffect, useRef, custom hooks, styled components, redux, redux-saga"
+        body="CSS-Flexbox, CSS-Grid, Immutability, LocalStorage, useState, useRef, custom hooks, styled components, redux, redux-saga"
       />
     </Container>
   )

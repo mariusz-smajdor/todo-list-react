@@ -13,7 +13,6 @@ https://mariusz-smajdor.github.io/todo-list-react/
 - Immutability
 - LocalStorage
 - useState
-- useEffect
 - useRef
 - custom hooks
 - styled components
