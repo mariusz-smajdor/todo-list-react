@@ -2,7 +2,7 @@ import Container from "../../common/Container"
 import MainHeader from "../../common/MainHeader"
 import Section from "../../common/Section"
 
-const About = () => {
+const AboutPage = () => {
   return (
     <Container>
       <MainHeader title="O projekcie" />
@@ -18,4 +18,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutPage
